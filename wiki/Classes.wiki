@@ -1,4 +1,2 @@
 #labels Featured
-=Classes=
-
   * *[http://agul-rep.googlecode.com/svn/trunk/classes/Rational.cpp Rational.cpp]* Library for using rational arithmetics.
