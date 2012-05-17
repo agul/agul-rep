@@ -1,7 +1,7 @@
-friend ostream& operator << (ostream &o, user& u) {
-	return o << "# name = \"" << u.name << "\"; n = " << u.n << endl;
+friend ostream& operator << (ostream &o, item& x) {
+	return o << "# A = \"" << x.a << "\"; B = " << x.b << endl;
 }
 
-friend istream& operator >> (istream &i, item& u) {
-	return i >> u.a >> u.b;
+friend istream& operator >> (istream &i, item& x) {
+	return i >> x.a >> x.b;
 }
