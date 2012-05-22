@@ -30,6 +30,8 @@ using namespace std;
 #define mp make_pair
 #define X first
 #define Y second
+#define y0 __MY_Y0__
+#define y1 __MY_Y1__
 #define sz(a) (int)a.size()
 #define fill(a, x) memset (a, x, sizeof(a))
 
@@ -81,6 +83,10 @@ template<class T> inline bool isPrime(T n) {if (n < 2) return false; T kk = (T)s
 template<class T> inline string toa(T x) {stringstream ss; ss << x; string ret; ss >> ret; return ret;}
 inline int toi(string s) {stringstream ss; ss << s; int ret; ss >> ret; return ret;}
 inline ll tol(string s) {stringstream ss; ss << s; ll ret; ss >> ret; return ret;}
+inline void swap(short& a, short& b) {b ^= a ^= b ^= a;}
+inline void swap(int& a, int& b) {b ^= a ^= b ^= a;}
+inline void swap(char& a, char& b) {b ^= a ^= b ^= a;}
+inline void swap(ll& a, ll& b) {b ^= a ^= b ^= a;}
 inline char upperCase(char ch) {return (ch >= 'a' && ch <= 'z') ? ch^32 : ch;}
 inline char lowerCase(char ch) {return (ch >= 'A' && ch <= 'Z') ? ch^32 : ch;}
 inline string upperCase(string s) {int ls = s.length(); for (int i = 0; i < ls; ++i) if (s[i] >= 'a' && s[i] <= 'z') s[i] ^= 32; return s;}
