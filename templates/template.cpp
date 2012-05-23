@@ -81,6 +81,7 @@ template<class T> inline T gcd(T a, T b) {if (a < b) swap(a, b); while (b) {a %=
 template<class T> inline T lcm(T a, T b) {return a * b / gcd(a, b);}
 template<class T> inline bool isPrime(T n) {if (n < 2) return false; T kk = (T)sqrt(n + 0.); for (T i = 2; i <= kk; ++i) if (!(n % i)) return false; return true;}
 template<class T> inline string toa(T x) {stringstream ss; ss << x; string ret; ss >> ret; return ret;}
+template<class T> inline T ppow(T a, ll b) {T ret = 1; while (b) {if (b & 1) ret *= a; a *= a; b >>= 1;} return ret;}
 inline int toi(string s) {stringstream ss; ss << s; int ret; ss >> ret; return ret;}
 inline ll tol(string s) {stringstream ss; ss << s; ll ret; ss >> ret; return ret;}
 inline void swap(short& a, short& b) {b ^= a ^= b ^= a;}
