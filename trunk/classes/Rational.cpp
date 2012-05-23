@@ -177,6 +177,22 @@ struct Rational {
 		norm();
 	}
 
+	double operator + (double x) {
+		return (a + 0.) / b + x;
+	}
+
+	double operator - (double x) {
+		return (a + 0.) / b - x;
+	}
+
+	double operator * (double x) {
+		return (a + 0.) / b * x;
+	}
+
+	double operator / (double x) {
+		return (a + 0.) / b / x;
+	}
+
 	bool operator == (Rational& x) {
 		return (a == x.a && b == x.b);
 	}
@@ -262,7 +278,7 @@ struct Rational {
 	}
 	
 	bool operator > (double x) {
-		return ((a + 0.) / b + EPS > x);
+		return ((a + 0.) / b > x + EPS);
 	}
 	
 	bool operator <= (double x) {
@@ -270,7 +286,7 @@ struct Rational {
 	}
 	
 	bool operator >= (double x) {
-		return ((a + 0.) / b + EPS >= x);
+		return ((a + 0.) / b >= x + EPS);
 	}
 
 	friend ostream& operator << (ostream &o, Rational& x) {
@@ -348,6 +364,10 @@ struct Rational {
 
 	inline ll hashCode() {
 		return a * 877117 + b;
+	}
+
+	inline Rational pow(ll n) {
+		return Rational(ppow(a, n), ppow(b, n));
 	}
 
 };
