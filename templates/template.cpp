@@ -1,27 +1,27 @@
 #pragma comment(linker, "/STACK:66777216")
 #define _USE_MATH_DEFINES
 #define _CRT_SECURE_NO_WARNINGS
+#include <algorithm>
+#include <cstdio>
+#include <cstdlib>
 #include <vector>
-#include <list>
+#include <utility>
 #include <map>
 #include <set>
+#include <iostream>
+#include <sstream>
+#include <iomanip>
+#include <memory.h>
+#include <assert.h>
+#include <list>
 #include <deque>
 #include <stack>
 #include <bitset>
-#include <algorithm>
 #include <functional>
 #include <numeric>
-#include <utility>
-#include <sstream>
-#include <iostream>
-#include <iomanip>
-#include <cstdio>
 #include <cmath>
-#include <cstdlib>
 #include <ctime>
 #include <queue>
-#include <assert.h>
-#include <memory.h>
 #pragma hdrstop
 
 using namespace std;
