@@ -1,5 +1,5 @@
 #define bitset __MY_BITSET__
-const int BITSET_MAXN = 1024;
+const int BITSET_MAXN = 3333;
 const int BITSET_LENGTH = (BITSET_MAXN >> 5) + 1;
 unordered_map<unsigned int, int> BITSET_COUNT;
 
@@ -7,16 +7,19 @@ struct Bitset {
 
 	unsigned int data[BITSET_LENGTH];
 
-	void set(const int x) {
+	Bitset & set(const int x) {
 		data[x >> 5] |= (1 << (x & 31));
+		return (*this);
 	}
 
-	void flip(const int x) {
+	Bitset & flip(const int x) {
 		data[x >> 5] ^= (1 << (x & 31));
+		return (*this);
 	}
 
-	void clear(const int x) {
+	Bitset & clear(const int x) {
 		data[x >> 5] &= ~(1 << (x & 31));
+		return (*this);
 	}
 
 	bool get(const int x) {
@@ -39,17 +42,20 @@ struct Bitset {
 		return true;
 	}
 
-	void reset() {
+	Bitset & reset() {
 		memset(data, 0, sizeof(data));
+		return (*this);
 	}
 
-	void set() {
+	Bitset & set() {
 		memset(data, 0xff, sizeof(data));
+		return (*this);
 	}
 
-	void flip() {
+	Bitset & flip() {
 		for (int i = 0; i < BITSET_LENGTH; ++i)
 			data[i] = ~data[i];
+		return (*this);
 	}
 
 	int count() {
